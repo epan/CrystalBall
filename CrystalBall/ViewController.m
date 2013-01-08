@@ -15,15 +15,16 @@
 @implementation ViewController
 @synthesize predictionLabel;
 @synthesize predictionArray;
+@synthesize imageView;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
     UIImage *image = [UIImage imageNamed:@"background.png"];
-    UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
-//    [self.view addSubview:imageView];
-    [self.view insertSubview:imageView atIndex:0];
+    self.imageView = [[UIImageView alloc] initWithImage:image];
+//  [self.view addSubview:imageView];
+    [self.view insertSubview:self.imageView atIndex:0];
     
 	// Do any additional setup after loading the view, typically from a nib.
     self.predictionArray = [[NSArray alloc] initWithObjects:
